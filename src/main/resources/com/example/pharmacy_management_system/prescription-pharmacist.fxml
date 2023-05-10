@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.PharmacistPrescriptionController">
+   <children>
+      <Label text="Prescription">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="569.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="View">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="780.0">
+                     <children>
+                        <TableView fx:id="prescription_table" prefHeight="508.0" prefWidth="780.0">
+                           <columns>
+                              <TableColumn fx:id="presCustomerCol" prefWidth="109.23989009857178" text="Customer" />
+                              <TableColumn fx:id="presPresNoCol" prefWidth="108.15071868896484" text="Prescription No" />
+                              <TableColumn fx:id="presInvoiceNoCol" prefWidth="98.54351806640625" text="Invoice No" />
+                              <TableColumn fx:id="presDateCol" prefWidth="125.7017822265625" text="Date" />
+                              <TableColumn fx:id="presDeleteCol" prefWidth="88.68902587890625" text="Delete" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Create New">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane hgap="20.0" prefHeight="394.0" prefWidth="360.0" vgap="10.0">
+                           <children>
+                              <VBox prefHeight="28.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Үйлчлүүлэгчийн дугаар">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerId" promptText="Үйлчлүүлэгчийн дугаар" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Үйлчлүүлэгчийн нэр">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerName" promptText="Үйлчлүүлэгчийн нэр" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Нас">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerAge" promptText="Нас" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хүйс">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerGender" promptText="Хүйс" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хаяг">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerAddress" promptText="Хаяг" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Утас">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_customerPhone" promptText="Утас" />
+                                 </children>
+                              </VBox>
+                              <ComboBox fx:id="pres_drug" prefHeight="26.0" prefWidth="333.0" promptText="Эмээ сонгоно уу" />
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хэмжээ">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_dose" promptText="Хэмжээ" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хэдэн ширхэг">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_quantity" promptText="Хэдэн ширхэг" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хүч">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pres_strength" promptText="Хүч" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#onAddPrescription" prefHeight="26.0" prefWidth="333.0" text="Нэмэх" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

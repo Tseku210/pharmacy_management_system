@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.ManagerPrescriptionController">
+   <children>
+      <Label text="View Prescription">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="569.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Prescription">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="780.0">
+                     <children>
+                        <TableView fx:id="prescription_table" layoutX="131.0" layoutY="42.0" prefHeight="400.0" prefWidth="500.0">
+                           <columns>
+                              <TableColumn fx:id="customerCol" prefWidth="73.74411010742188" text="Customer" />
+                              <TableColumn fx:id="prescriptionNoCol" minWidth="0.0" prefWidth="103.98812866210938" text="Prescription No" />
+                              <TableColumn fx:id="invoiceNoCol" minWidth="0.0" prefWidth="75.146484375" text="Invoice No" />
+                              <TableColumn fx:id="dateCol" prefWidth="124.91986083984375" text="Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

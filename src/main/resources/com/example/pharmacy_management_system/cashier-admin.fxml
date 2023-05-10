@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.AdminUsersController">
+   <children>
+      <Label fx:id="type_lbl" text="Cashier">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="569.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="VIEW USER">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="780.0">
+                     <children>
+                        <TableView fx:id="users_table" layoutX="51.0" layoutY="36.0">
+                           <columns>
+                              <TableColumn fx:id="userIdCol" prefWidth="36.0" text="ID" />
+                              <TableColumn fx:id="staffIdCol" prefWidth="66.0" text="Staff ID" />
+                              <TableColumn fx:id="firstnameCol" prefWidth="76.0" text="Firstname" />
+                              <TableColumn fx:id="lastnameCol" prefWidth="79.0" text="Lastname" />
+                              <TableColumn fx:id="usernameCol" prefWidth="92.0" text="Username" />
+                              <TableColumn fx:id="addressCol" prefWidth="85.0" text="Address" />
+                              <TableColumn fx:id="phoneCol" prefWidth="91.0" text="Phone" />
+                              <TableColumn fx:id="updateCol" prefWidth="75.0" text="Update" />
+                              <TableColumn fx:id="deleteCol" prefWidth="75.0" text="Delete" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="ADD USER">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="431.0" prefWidth="302.0" spacing="5.0">
+                           <children>
+                              <VBox prefHeight="28.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Нэр">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_firstname" promptText="Нэр" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="20.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Овог">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_lastname" promptText="Овог" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="67.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Ажилтны дугаар">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_staffId" promptText="Ажилтны дугаар" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="114.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Хаяг">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_address" promptText="Хаяг" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="161.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Утас">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_phone" promptText="Утас" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="208.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Мэйл">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_mail" promptText="Майл" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="255.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Нэвтрэх нэр">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_username" promptText="Нэвтрэх нэр" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="302.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Нууц үг">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="user_password" promptText="Нууц үг" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#onAddUser" prefHeight="26.0" prefWidth="314.0" text="Нэмэх">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

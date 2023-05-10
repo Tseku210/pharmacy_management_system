@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.AdminLocalDataController">
+   <children>
+      <Label text="Find farmacist from selected city from the local database">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="15.0" prefWidth="780.0" spacing="10.0">
+         <children>
+            <TextField fx:id="searchField" promptText="Хаягаа оруулна уу" />
+            <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#onCitySearch" text="Хайх" />
+         </children>
+      </HBox>
+      <TableView fx:id="users_table" prefHeight="508.0" prefWidth="780.0">
+         <columns>
+            <TableColumn fx:id="userIdCol" prefWidth="36.0" text="ID" />
+            <TableColumn fx:id="staffIdCol" prefWidth="66.0" text="Staff ID" />
+            <TableColumn fx:id="firstnameCol" prefWidth="109.53018188476562" text="Firstname" />
+            <TableColumn fx:id="lastnameCol" prefWidth="93.96986389160156" text="Lastname" />
+            <TableColumn fx:id="usernameCol" prefWidth="132.611572265625" text="Username" />
+            <TableColumn fx:id="addressCol" prefWidth="165.88851928710938" text="Address" />
+            <TableColumn fx:id="phoneCol" prefWidth="176.88360595703125" text="Phone" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.ManagerStockController">
+   <children>
+      <Label text="Manage Stock">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="569.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="View Stock">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="780.0">
+                     <children>
+                        <TableView fx:id="medicine_table" prefHeight="508.0" prefWidth="780.0">
+                           <columns>
+                              <TableColumn fx:id="medId" prefWidth="36.0" text="ID" />
+                              <TableColumn fx:id="medName" text="Name" />
+                              <TableColumn fx:id="medCategory" text="Category" />
+                              <TableColumn fx:id="medDesc" prefWidth="116.70883178710938" text="Description" />
+                              <TableColumn fx:id="medStatus" text="Status" />
+                              <TableColumn fx:id="medDate" prefWidth="161.0" text="Date" />
+                              <TableColumn fx:id="deleteCol" prefWidth="76.0" text="Delete" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Medicine">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="431.0" prefWidth="302.0" spacing="5.0">
+                           <children>
+                              <VBox prefHeight="28.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Нэр">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_name" promptText="Эмний нэр" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="20.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Категори">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_category" promptText="Категори" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="67.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Тайлбар">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_desc" promptText="Тайлбар" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="114.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Үйлдвэрлэсэн компани">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_company" promptText="Компани" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="161.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Түгээгч">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_supplier" promptText="Түгээгч" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="208.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Тоо хэмжээ">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_quantity" promptText="Тоо хэмжээ" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="255.0" prefHeight="30.0" prefWidth="157.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Ширхэгийн үнэ">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="med_cost" promptText="Үнэ" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#onAddMedicine" prefHeight="26.0" prefWidth="314.0" text="Нэмэх">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
